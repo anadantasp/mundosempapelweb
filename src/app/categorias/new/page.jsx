@@ -1,8 +1,8 @@
 "use client"
 
-import NavBar from "@/app/components/navbar"
-import Button from "@/app/components/button"
-import InputText from "@/app/components/input-text"
+import NavBar from "@/components/navbar"
+import Button from "@/components/button"
+import InputText from "@/components/input-text"
 import { create } from "@/actions/categorias"
 import { useRouter } from "next/navigation"
 import toast from "react-hot-toast"

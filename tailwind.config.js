@@ -10,6 +10,9 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       purple: {
+        200: 'E1E1E1',
+        300: 'rgba(182, 177, 186, 0.50);',
+        400: '#9E9E9E',
         500: '#6B6470',
         900: '#4A314D',
       },
@@ -17,7 +20,7 @@ module.exports = {
         500: '#ACE894',
         900: '#A8BA9A',
       },
-      white: '#FFF',
+      'slate-100':'rgb(241 245 249);'
     },
     extend: {
       backgroundImage: {

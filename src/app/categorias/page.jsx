@@ -1,5 +1,6 @@
-import NavBar from "../components/navbar";
-import Button from "../components/button";
+import NavBar from "../../components/navbar";
+import Button from "../../components/button";
+import SideBar from "@/components/sidebar";
 import { PlusIcon } from '@heroicons/react/24/solid'
 import DataRow from "./datarow";
 
@@ -24,18 +25,22 @@ export default async function PageCategorias() {
         <>
             <NavBar />
 
-            <main className="container bg-purple mt-10 mx-auto rounded p-4 max-w-xl">
-                <div className="flex justify-between">
-                    <h2 className="text-xl font-bold">Categorias</h2>
-                    <Button href="/categorias/new" icon={<PlusIcon className="h-6 w-6" />}>criar categoria</Button>
-                </div>
+           
+            <div className="flex border min-h-screen">
+                <SideBar />
 
-                <div className="space-y-2">
-                    {categorias.map(categoria => <DataRow key={categoria.id} categoria={categoria} />)}
+                <main className="mt-10 pl-4 w-full">
 
+                    <div className="w-min">
+                        <Button href="/categorias/new" className="w-10" >ADICIONAR</Button>
+                    </div>
+            
+                    <div className="pr-3">
+                        {categorias.map(categoria => <DataRow key={categoria.id} categoria={categoria} />)}
+                    </div>
+                </main>
+            </div>
 
-                </div>
-            </main>
 
 
 
