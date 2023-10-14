@@ -14,7 +14,13 @@ export async function create(data) {
   };
   const resp = await fetch(url, options);
 
-  if (resp.status !== 201) return { error: 'erro ao cadastrar' };
+  if (resp.status !== 201){
+    const messages = await resp.json()
+    return{
+      error: "erro ao cadastrar",
+      messages
+    }
+  }
 
   revalidatePath("/categorias");
 }

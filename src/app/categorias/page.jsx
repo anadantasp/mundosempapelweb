@@ -1,7 +1,6 @@
 import NavBar from "../../components/navbar";
 import Button from "../../components/button";
 import SideBar from "@/components/sidebar";
-import { PlusIcon } from '@heroicons/react/24/solid'
 import DataRow from "./datarow";
 
 async function carregarDados() {
@@ -22,7 +21,7 @@ export default async function PageCategorias() {
     const categorias = await carregarDados()
 
     return (
-        <>
+        <div className="h-screen bg-purple-500">
             <NavBar />
 
            
@@ -44,6 +43,6 @@ export default async function PageCategorias() {
 
 
 
-        </>
+            </div>
     )
 }
